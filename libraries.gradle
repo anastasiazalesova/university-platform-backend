@@ -1,0 +1,6 @@
+project.ext {
+    dbUrl = "jdbc:postgresql://localhost:5432/university_platform"
+    dbUsername = "postgres"
+    dbPassword = "postgres"
+    dbSchema = "university_platform"
+}
