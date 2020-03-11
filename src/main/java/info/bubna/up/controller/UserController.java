@@ -1,6 +1,7 @@
 package info.bubna.up.controller;
 
 import info.bubna.up.dto.WebDisciplineDTO;
+import info.bubna.up.dto.WebMarkDTO;
 import info.bubna.up.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,5 +22,10 @@ public class UserController {
     @GetMapping("/{id}/disciplines")
     public List<WebDisciplineDTO> getDisciplines(@PathVariable("id") UUID id) {
         return userService.getDisciplines(id);
+    }
+
+    @GetMapping("/{id}/marks")
+    public List<WebMarkDTO> getMarks(@PathVariable("id") UUID id) {
+        return userService.getMarks(id);
     }
 }
